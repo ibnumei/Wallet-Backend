@@ -1,0 +1,48 @@
+{
+  "name": "e-wallet-backend-service",
+  "version": "1.0.0",
+  "description": "<add-project-description-here>",
+  "scripts": {
+    "test": "jest --coverage --forceExit --runInBand",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "babel-node index.js"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/runtime": "^7.7.2",
+    "eslint": "5.0.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.21.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm run test -- --passWithNoTests"
+    }
+  },
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "expres": "0.0.5",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.3",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mockdate": "^2.0.5",
+    "node-forge": "^0.9.1",
+    "pg": "^7.13.0",
+    "pg-hstore": "^2.3.3",
+    "readline-sync": "^1.4.10",
+    "sequelize": "^5.21.2",
+    "supertest": "^4.0.2"
+  }
+}
